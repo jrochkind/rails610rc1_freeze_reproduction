@@ -51,7 +51,7 @@ class PostCounterJob < ActiveJob::Base
 end
 
 
-class DeadlockTest < ActiveSupport::TestCase
+class NeverReturnsTest < ActiveSupport::TestCase
   def test_association_stuff
     post = Post.create!
     # In 6.1.0.rc1 this seems to deadlock, never coming back. In 6.0.3.4 nothing unsuual happens.
